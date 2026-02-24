@@ -1,0 +1,14 @@
+<Crimelog>
+  <Investigationlog>
+    <CrimeId>1</CrimeId>
+    <PSId>732861</PSId>
+    <DateTime>05/10/2025 05:38:09 PM</DateTime>
+    <Description>Day1:Investigated crime related few persons &amp; process to identify suspect</Description>
+  </Investigationlog>
+  <Investigationlog>
+    <CrimeId>1</CrimeId>
+    <PSId>732861</PSId>
+    <DateTime>05/10/2025 05:39:05 PM</DateTime>
+    <Description>Day2:Collected strong evidence related to crime-CCTV footage</Description>
+  </Investigationlog>
+</Crimelog>

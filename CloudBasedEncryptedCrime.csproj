@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{748BC828-5DB2-4E86-8C0A-2D227FD6DEB4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CloudBasedEncryptedCrime</RootNamespace>
+    <AssemblyName>CloudBasedEncryptedCrime</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AWSSDK.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\AWSSDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.S3, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\AWSSDK.S3.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.4.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.8.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Sha2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Sha2.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="zxing, Version=0.16.5.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.5.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AddArea.aspx" />
+    <Content Include="AddCrime.aspx" />
+    <Content Include="AddCrimeEvidence.aspx" />
+    <Content Include="AddCrimeInvestigationLogs.aspx" />
+    <Content Include="AddFSLCrimeData.aspx" />
+    <Content Include="AddFSLStaff.aspx" />
+    <Content Include="AddPoliceStaff.aspx" />
+    <Content Include="AddPoliceStation.aspx" />
+    <Content Include="ApplicationManagerHome.aspx" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\style_css.css" />
+    <Content Include="css_css\atlas.css" />
+    <Content Include="css_css\bootstrap.min.css" />
+    <Content Include="css_css\clndr.css" />
+    <Content Include="css_css\fabochart.css" />
+    <Content Include="css_css\flexslider.css" />
+    <Content Include="css_css\font-awesome.css" />
+    <Content Include="css_css\graph.css" />
+    <Content Include="css_css\icon-font.min.css" />
+    <Content Include="css_css\owl.carousel.css" />
+    <Content Include="css_css\style.css" />
+    <Content Include="DLL\AWSSDK.Core.dll" />
+    <Content Include="DLL\AWSSDK.S3.dll" />
+    <Content Include="DLL\itextsharp.dll" />
+    <Content Include="DLL\MySql.Data.dll" />
+    <Content Include="DLL\Newtonsoft.Json.dll" />
+    <Content Include="DLL\Sha2.dll" />
+    <Content Include="DLL\zxing.dll" />
+    <Content Include="DLL\zxing.presentation.dll" />
+    <Content Include="DownloadFile\1.xml" />
+    <Content Include="DownloadFile\1_CE.xml" />
+    <Content Include="DownloadFile\1_evidenceroomlog.xml" />
+    <Content Include="DownloadFile\1_FSLCE.xml" />
+    <Content Include="DownloadFile\1_FSLCEL.xml" />
+    <Content Include="DownloadFile\1_FSLCELog.xml" />
+    <Content Include="DownloadFile\1_Log.xml" />
+    <Content Include="DownloadFile\1_PDHOLog.xml" />
+    <Content Include="DownloadFile\2.xml" />
+    <Content Include="DownloadFile\6237_crime_6961.jpg" />
+    <Content Include="DownloadFile\6918_crime_6307.jpg" />
+    <Content Include="DownloadFile\7070_crime_2171.jpg" />
+    <Content Include="DownloadFile\7681_crime_2084.jpg" />
+    <Content Include="DownloadFile\8124_crime_1943.jpg" />
+    <Content Include="DownloadFile\8274_crime_5165.jpg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="FSLCrimeReportGenerate.aspx" />
+    <Content Include="FSLHome.aspx" />
+    <Content Include="images\11.jpg" />
+    <Content Include="images\1a_1.jpg" />
+    <Content Include="images\8.jpg" />
+    <Content Include="images\ab.png" />
+    <Content Include="images\b1.jpg" />
+    <Content Include="images\b2.jpg" />
+    <Content Include="images\b3.jpg" />
+    <Content Include="images\b4.jpg" />
+    <Content Include="images\b5.jpg" />
+    <Content Include="images\b6.jpg" />
+    <Content Include="images\b7.jpg" />
+    <Content Include="images\b8.jpg" />
+    <Content Include="images\b9.jpg" />
+    <Content Include="images\bag.png" />
+    <Content Include="images\banner.jpg" />
+    <Content Include="images\banner0.jpg" />
+    <Content Include="images\banner1.jpg" />
+    <Content Include="images\banner12.jpg" />
+    <Content Include="images\banner13.jpg" />
+    <Content Include="images\banner14.jpg" />
+    <Content Include="images\banner2.jpg" />
+    <Content Include="images\banner20.jpg" />
+    <Content Include="images\banner21.jpg" />
+    <Content Include="images\banner25.jpg" />
+    <Content Include="images\banner3.jpg" />
+    <Content Include="images\banner4.jpg" />
+    <Content Include="images\banner9.jpg" />
+    <Content Include="images\banner_1.png" />
+    <Content Include="images\banner_12.png" />
+    <Content Include="images\banner_2.jpg" />
+    <Content Include="images\banner_3.jpg" />
+    <Content Include="images\banner_4.jpg" />
+    <Content Include="images\banner_5.jpg" />
+    <Content Include="images\candidate.jpg" />
+    <Content Include="images\closew.gif" />
+    <Content Include="images\close_1.png" />
+    <Content Include="images\contact.jpg" />
+    <Content Include="images\Correct.jpg" />
+    <Content Include="images\cross.png" />
+    <Content Include="images\d1.jpg" />
+    <Content Include="images\d2.jpg" />
+    <Content Include="images\d3.jpg" />
+    <Content Include="images\d4.jpg" />
+    <Content Include="images\e1.jpg" />
+    <Content Include="images\e2.jpg" />
+    <Content Include="images\e3.jpg" />
+    <Content Include="images\e4.jpg" />
+    <Content Include="images\e5.jpg" />
+    <Content Include="images\e6.jpg" />
+    <Content Include="images\g1.jpg" />
+    <Content Include="images\g2.jpg" />
+    <Content Include="images\g3.jpg" />
+    <Content Include="images\g4.jpg" />
+    <Content Include="images\g5.jpg" />
+    <Content Include="images\g6.jpg" />
+    <Content Include="images\grid.png" />
+    <Content Include="images\icons.png" />
+    <Content Include="images\icon_sprite.png" />
+    <Content Include="images\img-sprite.png" />
+    <Content Include="images\leftw.gif" />
+    <Content Include="images\loc1.jpg" />
+    <Content Include="images\loc2.jpg" />
+    <Content Include="images\loc3.jpg" />
+    <Content Include="images\loc4.jpg" />
+    <Content Include="images\loc5.jpg" />
+    <Content Include="images\loc6.jpg" />
+    <Content Include="images\loc7.jpg" />
+    <Content Include="images\loc8.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\mid.jpg" />
+    <Content Include="images\na.jpg" />
+    <Content Include="images\na1.jpg" />
+    <Content Include="images\na2.jpg" />
+    <Content Include="images\pf1.jpg" />
+    <Content Include="images\pf2.jpg" />
+    <Content Include="images\pf3.jpg" />
+    <Content Include="images\pf4.jpg" />
+    <Content Include="images\phon.png" />
+    <Content Include="images\process.jpg" />
+    <Content Include="images\rightw.gif" />
+    <Content Include="images\right_arrow.png" />
+    <Content Include="images\s1.jpg" />
+    <Content Include="images\s2.jpg" />
+    <Content Include="images\s3.jpg" />
+    <Content Include="images\s4.jpg" />
+    <Content Include="images\s5.jpg" />
+    <Content Include="images\s6.jpg" />
+    <Content Include="images\s7.jpg" />
+    <Content Include="images\s8.jpg" />
+    <Content Include="images\s9.jpg" />
+    <Content Include="images\search.png" />
+    <Content Include="images\sh1.jpg" />
+    <Content Include="images\sh2.jpg" />
+    <Content Include="images\sh3.jpg" />
+    <Content Include="images\sh4.jpg" />
+    <Content Include="images\sh5.jpg" />
+    <Content Include="images\sh6.jpg" />
+    <Content Include="images\single.jpg" />
+    <Content Include="images\slider_handle.png" />
+    <Content Include="images\t1.jpg" />
+    <Content Include="images\t4.jpg" />
+    <Content Include="images\Tamper.jpg" />
+    <Content Include="images\team.jpg" />
+    <Content Include="images\test1.jpg" />
+    <Content Include="images\test2.jpg" />
+    <Content Include="images\test3.jpg" />
+    <Content Include="images\tick.png" />
+    <Content Include="images\tick1.png" />
+    <Content Include="images\tw.png" />
+    <Content Include="images\w1.jpg" />
+    <Content Include="images\w10.jpg" />
+    <Content Include="images\w11.jpg" />
+    <Content Include="images\w12.jpg" />
+    <Content Include="images\w2.jpg" />
+    <Content Include="images\w3.jpg" />
+    <Content Include="images\w4.jpg" />
+    <Content Include="images\w5.jpg" />
+    <Content Include="images\w6.jpg" />
+    <Content Include="images\w7.jpg" />
+    <Content Include="images\w8.jpg" />
+    <Content Include="images\w9.jpg" />
+    <Content Include="images\wh2.jpg" />
+    <Content Include="images\wh3.jpg" />
+    <Content Include="images\wh4.jpg" />
+    <Content Include="images\wh5.jpg" />
+    <Content Include="images\wh6.jpg" />
+    <Content Include="index.aspx" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\jquery-2.1.4.min.js" />
+    <Content Include="js_js\amcharts.js" />
+    <Content Include="js_js\bootstrap.min.js" />
+    <Content Include="js_js\cbpFWTabs.js" />
+    <Content Include="js_js\Chart.js" />
+    <Content Include="js_js\clndr.js" />
+    <Content Include="js_js\imagezoom.js" />
+    <Content Include="js_js\jquery-1.10.2.min.js" />
+    <Content Include="js_js\jquery.flexslider.js" />
+    <Content Include="js_js\jquery.flot.js" />
+    <Content Include="js_js\jquery.fn.gantt.js" />
+    <Content Include="js_js\jquery.nicescroll.js" />
+    <Content Include="js_js\light.js" />
+    <Content Include="js_js\menu_jquery.js" />
+    <Content Include="js_js\moment-2.2.1.js" />
+    <Content Include="js_js\owl.carousel.js" />
+    <Content Include="js_js\pie-chart.js" />
+    <Content Include="js_js\scripts.js" />
+    <Content Include="js_js\serial.js" />
+    <Content Include="js_js\simpleCart.min.js" />
+    <Content Include="js_js\site.js" />
+    <Content Include="js_js\underscore-min.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="MapCrimePoliceStaff.aspx" />
+    <Content Include="MapPoliceStaff.aspx" />
+    <Content Include="OTPVerify.aspx" />
+    <Content Include="PhotoFiles\229328_2810.png" />
+    <Content Include="PhotoFiles\344724_9964.png" />
+    <Content Include="PhotoFiles\496149_7663.png" />
+    <Content Include="PhotoFiles\629385_2499.png" />
+    <Content Include="PhotoFiles\655931_2724.jpg" />
+    <Content Include="PhotoFiles\847755_3788.jpg" />
+    <Content Include="PhotoFiles\931915_1805.png" />
+    <Content Include="PhotoFiles\980608_2627.png" />
+    <Content Include="PoliceStaffHome.aspx" />
+    <Content Include="PoliceStaffViewCrimeInvestigationLog.aspx" />
+    <Content Include="PoliceStaffViewEvidenceLog.aspx" />
+    <Content Include="PoliceStaffViewFSLReport.aspx" />
+    <Content Include="PoliceStationHome.aspx" />
+    <Content Include="PoliceStationViewCrimeLogs.aspx" />
+    <Content Include="PoliceStationViewEvidenceLog.aspx" />
+    <Content Include="PoliceStationViewFSLReport.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddArea.aspx.cs">
+      <DependentUpon>AddArea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddArea.aspx.designer.cs">
+      <DependentUpon>AddArea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddCrime.aspx.cs">
+      <DependentUpon>AddCrime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddCrime.aspx.designer.cs">
+      <DependentUpon>AddCrime.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddCrimeEvidence.aspx.cs">
+      <DependentUpon>AddCrimeEvidence.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddCrimeEvidence.aspx.designer.cs">
+      <DependentUpon>AddCrimeEvidence.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddCrimeInvestigationLogs.aspx.cs">
+      <DependentUpon>AddCrimeInvestigationLogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddCrimeInvestigationLogs.aspx.designer.cs">
+      <DependentUpon>AddCrimeInvestigationLogs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddFSLCrimeData.aspx.cs">
+      <DependentUpon>AddFSLCrimeData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddFSLCrimeData.aspx.designer.cs">
+      <DependentUpon>AddFSLCrimeData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddFSLStaff.aspx.cs">
+      <DependentUpon>AddFSLStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddFSLStaff.aspx.designer.cs">
+      <DependentUpon>AddFSLStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddPoliceStaff.aspx.cs">
+      <DependentUpon>AddPoliceStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddPoliceStaff.aspx.designer.cs">
+      <DependentUpon>AddPoliceStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddPoliceStation.aspx.cs">
+      <DependentUpon>AddPoliceStation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddPoliceStation.aspx.designer.cs">
+      <DependentUpon>AddPoliceStation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AESCrypto.cs" />
+    <Compile Include="ApplicationManager.Master.cs">
+      <DependentUpon>ApplicationManager.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicationManager.Master.designer.cs">
+      <DependentUpon>ApplicationManager.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationManagerHome.aspx.cs">
+      <DependentUpon>ApplicationManagerHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicationManagerHome.aspx.designer.cs">
+      <DependentUpon>ApplicationManagerHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrimeInvestigationLog.cs" />
+    <Compile Include="FSLCrimeReportGenerate.aspx.cs">
+      <DependentUpon>FSLCrimeReportGenerate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FSLCrimeReportGenerate.aspx.designer.cs">
+      <DependentUpon>FSLCrimeReportGenerate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FSLHome.aspx.cs">
+      <DependentUpon>FSLHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FSLHome.aspx.designer.cs">
+      <DependentUpon>FSLHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FSLStaff.Master.cs">
+      <DependentUpon>FSLStaff.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FSLStaff.Master.designer.cs">
+      <DependentUpon>FSLStaff.Master</DependentUpon>
+    </Compile>
+    <Compile Include="GetDecryptData.cs" />
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MapCrimePoliceStaff.aspx.cs">
+      <DependentUpon>MapCrimePoliceStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MapCrimePoliceStaff.aspx.designer.cs">
+      <DependentUpon>MapCrimePoliceStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MapPoliceStaff.aspx.cs">
+      <DependentUpon>MapPoliceStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MapPoliceStaff.aspx.designer.cs">
+      <DependentUpon>MapPoliceStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyConnection.cs" />
+    <Compile Include="OTPVerify.aspx.cs">
+      <DependentUpon>OTPVerify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OTPVerify.aspx.designer.cs">
+      <DependentUpon>OTPVerify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PoliceStaff.Master.cs">
+      <DependentUpon>PoliceStaff.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PoliceStaff.Master.designer.cs">
+      <DependentUpon>PoliceStaff.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PoliceStaffHome.aspx.cs">
+      <DependentUpon>PoliceStaffHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PoliceStaffHome.aspx.designer.cs">
+      <DependentUpon>PoliceStaffHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PoliceStaffViewCrimeInvestigationLog.aspx.cs">
+      <DependentUpon>PoliceStaffViewCrimeInvestigationLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PoliceStaffViewCrimeInvestigationLog.aspx.designer.cs">
+      <DependentUpon>PoliceStaffViewCrimeInvestigationLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PoliceStaffViewEvidenceLog.aspx.cs">
+      <DependentUpon>PoliceStaffViewEvidenceLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PoliceStaffViewEvidenceLog.aspx.designer.cs">
+      <DependentUpon>PoliceStaffViewEvidenceLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PoliceStaffViewFSLReport.aspx.cs">
+      <DependentUpon>PoliceStaffViewFSLReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PoliceStaffViewFSLReport.aspx.designer.cs">
+      <DependentUpon>PoliceStaffViewFSLReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PoliceStation.Master.cs">
+      <DependentUpon>PoliceStation.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PoliceStation.Master.designer.cs">
+      <DependentUpon>PoliceStation.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PoliceStationHome.aspx.cs">
+      <DependentUpon>PoliceStationHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PoliceStationHome.aspx.designer.cs">
+      <DependentUpon>PoliceStationHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PoliceStationViewCrimeLogs.aspx.cs">
+      <DependentUpon>PoliceStationViewCrimeLogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PoliceStationViewCrimeLogs.aspx.designer.cs">
+      <DependentUpon>PoliceStationViewCrimeLogs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PoliceStationViewEvidenceLog.aspx.cs">
+      <DependentUpon>PoliceStationViewEvidenceLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PoliceStationViewEvidenceLog.aspx.designer.cs">
+      <DependentUpon>PoliceStationViewEvidenceLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PoliceStationViewFSLReport.aspx.cs">
+      <DependentUpon>PoliceStationViewFSLReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PoliceStationViewFSLReport.aspx.designer.cs">
+      <DependentUpon>PoliceStationViewFSLReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SendEmail.cs" />
+    <Compile Include="Shamir.cs" />
+    <Compile Include="SymmetricCryptoClass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationManager.Master" />
+    <None Include="CrimeRecord\1_13044.pdf" />
+    <None Include="CrimeRecord\1_13854.pdf" />
+    <None Include="CrimeRecord\1_139031.pdf" />
+    <None Include="CrimeRecord\1_142852.pdf" />
+    <None Include="CrimeRecord\1_146626.pdf" />
+    <None Include="CrimeRecord\1_17849.pdf" />
+    <None Include="CrimeRecord\1_179114.pdf" />
+    <None Include="CrimeRecord\1_184259.pdf" />
+    <None Include="CrimeRecord\1_191812.pdf" />
+    <None Include="CrimeRecord\1_198741.pdf" />
+    <None Include="CrimeRecord\1_4964.pdf" />
+    <None Include="CrimeRecord\1_5456.pdf" />
+    <None Include="CrimeRecord\1_59817.pdf" />
+    <None Include="CrimeRecord\1_75555.pdf" />
+    <None Include="CrimeRecord\2_107621.pdf" />
+    <None Include="CrimeRecord\2_108624.pdf" />
+    <None Include="CrimeRecord\2_16431.pdf" />
+    <None Include="CrimeRecord\2_3050.pdf" />
+    <None Include="CrimeRecord\2_51723.pdf" />
+    <None Include="DownloadFile\1_49210.pdf" />
+    <None Include="DownloadFile\1_80034.pdf" />
+    <None Include="fonts\fontawesome-webfont.eot" />
+    <None Include="fonts\fontawesome-webfont.ttf" />
+    <None Include="fonts\fontawesome-webfont.woff2" />
+    <None Include="fonts\FontAwesome.otf" />
+    <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="FSLStaff.Master" />
+    <None Include="images\.DS_Store" />
+    <None Include="images\98524985.cms" />
+    <None Include="images\banner27.cms" />
+    <None Include="images\digital-forensics-2.webp" />
+    <None Include="images\Thumbs.db" />
+    <Content Include="PoliceStation.Master" />
+    <Content Include="PoliceStaff.Master" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>33868</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

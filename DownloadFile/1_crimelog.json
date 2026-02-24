@@ -1,0 +1,23 @@
+[
+  {
+    "StaffId": "685575",
+    "StaffRole": "Police Staff",
+    "CrimeId": "1",
+    "LogDate": "14/02/2026 11:00:47",
+    "Description": "Day 1:Investigated Crime Related few family person & neighbour house member"
+  },
+  {
+    "StaffId": "685575",
+    "StaffRole": "Police Staff",
+    "CrimeId": "1",
+    "LogDate": "14/02/2026 11:01:49",
+    "Description": "Day 2: Collected Phone call history & investigated call person"
+  },
+  {
+    "StaffId": "685575",
+    "StaffRole": "Police Staff",
+    "CrimeId": "1",
+    "LogDate": "14/02/2026 11:06:12",
+    "Description": "Murder was done for Property dispute"
+  }
+]

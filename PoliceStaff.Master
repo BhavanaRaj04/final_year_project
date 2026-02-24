@@ -1,0 +1,98 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PoliceStaff.master.cs" Inherits="CloudBasedEncryptedCrime.PoliceStaff" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+    <title>Cloud-Based Encrypted Crime Investigation & Evidence</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Gretong Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Bootstrap Core CSS -->
+    <link href="css_css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <!-- Custom CSS -->
+    <link href="css_css/style.css" rel='stylesheet' type='text/css' />
+    <!-- Graph CSS -->
+    <link href="css_css/font-awesome.css" rel="stylesheet">
+    <!-- jQuery -->
+    <%-- <link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400'
+        rel='stylesheet' type='text/css' />
+    <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet'
+        type='text/css'>--%>
+    <!-- lined-icons -->
+    <link rel="stylesheet" href="css_css/icon-font.min.css" type='text/css' />
+    <%--<script src="js_js/simpleCart.min.js"> </script>
+    <script src="js_js/amcharts.js"></script>
+    <script src="js_js/serial.js"></script>
+    <script src="js_js/light.js"></script>--%>
+    <!-- //lined-icons -->
+    <%-- <script src="js_js/jquery-1.10.2.min.js"></script>--%>
+</head>
+<body>
+    <div class="page-container">
+        <!--/content-inner-->
+        <div class="left-content">
+            <div class="inner-content">
+                <!-- header-starts -->
+                <!-- //header-ends -->
+                <!--content-->
+                <div class="content">
+                    <div class="women_main">
+                        <!-- start content -->
+                        <div class="grids">
+                            <%--   <div class="progressbar-heading grids-heading">
+                                <h2>
+                                    Forms</h2>
+                            </div>--%>
+                            <div class="panel panel-widget forms-panel">
+                                <div class="forms">
+                                    <div class="form-grids widget-shadow" data-example-id="basic-forms">
+                                        <%-- <div class="form-title">
+                                            <h4>
+                                                Basic Form :</h4>
+                                        </div>--%>
+                                        <div class="form-body">
+                                            <form id="form1" runat="server">
+                                            <div>
+                                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                                </asp:ContentPlaceHolder>
+                                            </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end content -->
+                    </div>
+                </div>
+                <!--content-->
+            </div>
+        </div>
+        <!--//content-inner-->
+        <!--/sidebar-menu-->
+        <div class="sidebar-menu">
+            <header class="logo1">
+						<a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> 
+					</header>
+            <div style="border-top: 1px ridge rgba(255, 255, 255, 0.15)">
+            </div>
+            <div class="menu">
+                <ul id="menu">
+                    <li><a href="PoliceStaffHome.aspx"><i class="fa fa-tachometer"></i><span>Home</span></a></li>
+                    <li><a href="AddCrimeInvestigationLogs.aspx"><i class="fa fa-tachometer"></i><span>Add Crime Logs</span></a></li>
+                     <li><a href="PoliceStaffViewCrimeInvestigationLog.aspx"><i class="fa fa-tachometer"></i><span>View Crime Logs</span></a></li>
+                    <li><a href="PoliceStaffViewFSLReport.aspx"><i class="fa fa-tachometer"></i><span>View Crime FSL Report</span></a></li>
+                    <li><a href="AddCrimeEvidence.aspx"><i class="fa fa-tachometer"></i><span>Add Crime Evidence</span></a></li>
+                    <li><a href="PoliceStaffViewEvidenceLog.aspx"><i class="fa fa-tachometer"></i><span>View Crime Evidence</span></a></li>
+                    <li><a href="index.aspx"><i class="fa fa-tachometer"></i><span>Logout</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix">
+        </div>
+    </div>
+</body>
+</html>
